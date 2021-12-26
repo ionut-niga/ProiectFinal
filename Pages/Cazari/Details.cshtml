@@ -1,0 +1,37 @@
+﻿@page
+@model Proiect.Pages.Cazari.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Cazare</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cazare.DestinatieID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cazare.DestinatieID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cazare.Tip)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cazare.Tip)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cazare.Nume)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cazare.Nume)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Cazare.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
