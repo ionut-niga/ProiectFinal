@@ -24,7 +24,8 @@ a {
 -------------------------------------------------- */
 html {
     font-size: 18px;
-    color: black;
+    color: #4cff00;
+    
 }
 
 @media (min-width: 768px) {
@@ -34,7 +35,7 @@ html {
 }
 
 .border-top {
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e4fa4b;
 }
 
 .border-bottom {
@@ -56,10 +57,15 @@ html {
     position: relative;
     min-height: 100%;
 }
-
+background-image {
+    opacity: 0.5;
+}
 body {
     /* Margin bottom by footer height */
-    background-image: url('fundal.jpg');
+    
+    background-image: url('wall.jpg');
+   
+    
     color: #4cff00;
     height: 100%;
     /* Center and scale the image nicely */
@@ -74,5 +80,6 @@ body {
     width: 100%;
     white-space: nowrap;
     line-height: 60px; /* Vertically center the text there */
-    color: black;
+    color: #4cff00;
+    
 }
