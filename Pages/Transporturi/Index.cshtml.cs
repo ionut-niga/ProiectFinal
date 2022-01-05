@@ -23,7 +23,11 @@ namespace Proiect.Pages.Transporturi
 
         public async Task OnGetAsync()
         {
-            Transport = await _context.Transport.ToListAsync();
+            Transport = await _context.Transport
+               
+                .ToListAsync();
         }
     }
 }
+
+

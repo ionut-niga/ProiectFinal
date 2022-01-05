@@ -7,7 +7,7 @@
 
 <h1>Edit</h1>
 
-<h4>Contract</h4>
+<h4>Rezervare</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -16,17 +16,17 @@
             <input type="hidden" asp-for="Contract.ID" />
             <div class="form-group">
                 <label asp-for="Contract.TransportID" class="control-label"></label>
-                <input asp-for="Contract.TransportID" class="form-control" />
+                <select asp-for="Contract.TransportID" class="form-control" asp-items="@Model.TransportSl"></select>
                 <span asp-validation-for="Contract.TransportID" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Contract.ClientID" class="control-label"></label>
-                <input asp-for="Contract.ClientID" class="form-control" />
+                <select asp-for="Contract.ClientID" class="form-control" asp-items="@Model.ClientSl"></select>
                 <span asp-validation-for="Contract.ClientID" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Contract.CazareID" class="control-label"></label>
-                <input asp-for="Contract.CazareID" class="form-control" />
+                <select asp-for="Contract.CazareID" class="form-control" asp-items="@Model.CazareSl"></select>
                 <span asp-validation-for="Contract.CazareID" class="text-danger"></span>
             </div>
             <div class="form-group">

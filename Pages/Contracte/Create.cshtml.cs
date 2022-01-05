@@ -21,18 +21,22 @@ namespace Proiect.Pages.Contracte
 
         public IActionResult OnGet()
         {
-            ViewData["TransportID"] = new SelectList(_context.Set<Transport>(), "ID", "Firma");
+            PopulateDropdowns();
             return Page();
         }
 
         [BindProperty]
         public Contract Contract { get; set; }
+        public SelectList TransportSl { get; set; }
+        public SelectList ClientSl { get; set; }
+        public SelectList CazareSl { get; set; }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
+                PopulateDropdowns(Contract.TransportID, Contract.ClientID, Contract.CazareID);
                 return Page();
             }
 
@@ -41,5 +45,13 @@ namespace Proiect.Pages.Contracte
 
             return RedirectToPage("./Index");
         }
+
+        private void PopulateDropdowns(int? transportId = null, int? clientId = null, int? cazareId = null)
+        {
+            TransportSl = new SelectList(_context.Transport, "ID", "Firma", transportId);
+            ClientSl = new SelectList(_context.Client, "ID", "Nume", clientId);
+            CazareSl = new SelectList(_context.Cazare, "ID", "Tip", cazareId);
+        }
+
     }
 }

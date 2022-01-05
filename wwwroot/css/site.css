@@ -9,7 +9,8 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 a {
-    color: #4cff00;
+    color: #001e67;
+    font-weight:bold;
 }
 
 .btn-primary {
@@ -24,8 +25,7 @@ a {
 -------------------------------------------------- */
 html {
     font-size: 18px;
-    color: #4cff00;
-    
+    color: #ff3400;
 }
 
 @media (min-width: 768px) {
@@ -57,21 +57,17 @@ html {
     position: relative;
     min-height: 100%;
 }
-background-image {
-    opacity: 0.5;
+body.background-image{
+    
 }
 body {
-    /* Margin bottom by footer height */
-    
-    background-image: url('wall.jpg');
-   
-    
-    color: #4cff00;
-    height: 100%;
-    /* Center and scale the image nicely */
+    color: #001d61;
+    background-image: url('drb.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
+    
+    /* Center and scale the image nicely */
 }
 
 .footer {
@@ -80,6 +76,5 @@ body {
     width: 100%;
     white-space: nowrap;
     line-height: 60px; /* Vertically center the text there */
-    color: #4cff00;
-    
+    color: #ff004c;
 }

@@ -25,6 +25,8 @@ namespace Proiect.Pages.Contracte
         {
             Contract = await _context.Contract
                 .Include(b => b.Transport)
+                .Include(b => b.Client)
+                .Include(b => b.Cazare)
                 .ToListAsync();
 
         }

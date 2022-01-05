@@ -1,6 +1,7 @@
 ﻿@page "/"
 @model Proiect.Pages.Contracte.IndexModel
 
+
 @{
     ViewData["Title"] = "Index";
 }
@@ -38,13 +39,13 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.TransportID)
+                    @Html.DisplayFor(modelItem => item.Transport.Firma)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.ClientID)
+                    @Html.DisplayFor(modelItem => item.Client.Nume)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.CazareID)
+                    @Html.DisplayFor(modelItem => item.Cazare.Nume)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.DataContract)
@@ -61,3 +62,4 @@
         }
     </tbody>
 </table>
+
